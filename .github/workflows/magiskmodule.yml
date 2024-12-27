@@ -25,7 +25,7 @@ jobs:
           Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
       - name: Start Playit And RDP
         env:
-          PLAYIT_AUTH_KEY: ${{ secrets.PL }}
+          PLAYIT_AUTH_KEY: 3cc05655142177ec164a40dd13d451d34af2e63fd1be0ae162117405fd70fb51
         run: |
           Start-Process -FilePath "$env:USERPROFILE\playit.exe" -ArgumentList "--secret $env:PLAYIT_AUTH_KEY" -NoNewWindow -Wait
           Start-Process -FilePath "$env:USERPROFILE\playit.exe" -NoNewWindow
