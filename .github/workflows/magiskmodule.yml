@@ -1,9 +1,10 @@
 name: Free RDP Tunnel by revWhiteShadow at magiskmodule.gitlab.io
+on:
+  workflow_dispatch
 
-
-on: workflow_dispatch:
-
-jobs: setup-rdp-tunnel: runs-on: windows-latest
+jobs:
+  setup-rdp-tunnel:
+    runs-on: windows-latest
 
 steps:
 - name: Check out the repository
